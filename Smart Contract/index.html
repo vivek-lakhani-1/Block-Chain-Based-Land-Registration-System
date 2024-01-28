@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MetaMask Connection</title>
+</head>
+<body>
+    <button id="connectButton">Connect to MetaMask</button>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+    <script>
+        if (typeof window.ethereum !== 'undefined') {
+            const connectButton = document.getElementById('connectButton');
+            connectButton.addEventListener('click', async () => {
+                try {
+                    await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    console.log('Connected to MetaMask');
+                    const web3 = new Web3(window.ethereum);
+                    const accounts = await web3.eth.getAccounts();
+                    console.log('Connected account:', accounts[0]);
+                    const message = "We Are Verifing Your Identity and Wallet Address.";
+                    const signature = await web3.eth.personal.sign(message, accounts[0]);
+                    console.log('Digital signature:', signature);
+                } catch (error) {
+                    console.error('Error connecting to MetaMask:', error);
+                }
+            });
+        } else {
+            console.error('MetaMask is not installed');
+        }
+    </script>
+</body>
+</html>
