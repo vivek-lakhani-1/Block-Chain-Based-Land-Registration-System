@@ -100,7 +100,7 @@
 
 								<!-- Login -->
 								<div class="tab-content" id="tab1" style="display: none;">
-									<form method="post" class="login">
+									<div class="login">
 
 										<p class="form-row form-row-wide">
 											<label for="username">Name:
@@ -127,7 +127,7 @@
 											<hr style="border: 2px solid grey;">
 											<button class="button border" id="connectButton"
 												style="margin-left: 90px; background-color:darkslategrey;">
-												<div>
+												<div id="connectButton">
 													<img src="{% static '/images/metamask.jpeg' %}" alt="error-metamask-icon"
 														style="height: 32px;">
 													<span> or sign in with Metamask</span>
@@ -139,7 +139,7 @@
 											</div>
 										</div>
 
-									</form>
+									</div>
 								</div>
 
 								<!-- Register -->
@@ -602,6 +602,7 @@
 
 	<!-- Scripts
 ================================================== -->
+<script type="text/javascript" src="{% static 'js/signup.js' %}"></script>
 <script type="text/javascript" src="{% static 'scripts/jquery-3.6.0.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'scripts/jquery-migrate-3.3.2.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'scripts/mmenu.min.js' %}"></script>
@@ -618,6 +619,7 @@
 <script type="text/javascript" src="{% static 'scripts/infobox.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'scripts/markerclusterer.js' %}"></script>
 <script type="text/javascript" src="{% static 'scripts/maps.js' %}"></script>
+
 
 	<!-- Google Autocomplete -->
 	<script>
