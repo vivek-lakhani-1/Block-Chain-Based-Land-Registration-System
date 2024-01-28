@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Signup</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="innerContainer">
+        <div class="signUpContainer">
+          <div class="headingSignup">
+            <h2>Sign Up</h2>
+          </div>
+
+          <form action="/register" id="signupForm" method="post">
+            {% csrf_token %}
+          <div class="inputFields">
+            <input
+              type="text"
+              name="email"
+              type="email"
+              placeholder="Email"
+              id="email" required
+            />
+
+            <input
+              type="number"
+              name="phonenumber"
+              id="phonenumber"
+              maxlength="10"
+              placeholder="Phone number" required
+            />
+
+            <div class="passwordContainer">
+              <input type="password" name="password" placeholder="Confirm Password"  id="password" required/>
+              <!-- <img src="{% static 'assests/eye.png' %}" alt="error-eye-icon" /> -->
+            </div>
+          </div>
+
+          <div class="belowInputField">
+            <div class="form-control">
+              <label class="label cursor-pointer">
+                <input type="checkbox" class="toggle" checked />
+                <span class="label-text">Remember me</span>
+              </label>
+            </div>
+
+            
+          </div>
+
+          <div class="buttons">
+            <input type="submit" class="btn btn-wide inpbutton"  value="Sign Up">
+          </div>
+         
+        </form>
+
+          <div class="hr">
+
+          </div>
+
+          <div class="belowHr">
+            <button class="btn btn-wide" id="connectButton">
+              <div>
+                <img src="{% static 'assets/metamask.png' %}" alt="error-metamask-icon" />
+                <span> or sign in with Metamask</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="bottomLinks">
+            <span
+              >Already have an account?
+              <a href="/login" class="sign-link">Sign in Now</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>a{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/documents.css' %}">
+    <title>MetaMask</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <form action="/register/register_with_metamask" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="inputFields">
+              <input
+                type="text"
+                name="Name"
+                placeholder="Name"
+                required
+              />
+              <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+              <input
+                type="number"
+                name="age"
+                placeholder="Age"
+                max="99"
+                required
+              />
+              <input
+                type="text"
+                name="address"
+                placeholder="Address"
+                required
+              />
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                required
+              />
+              <input
+                type="file"
+                name="adhar"
+                placeholder="Adhar no."
+                required
+              />  
+
+              <input
+                type="file"
+                name="pan"
+                placeholder="Pan No."
+                required
+              /> 
+
+            </div>
+
+            <div class="buttons">
+              <input type="submit" class="btn btn-wide inpbutton" value="Proceed">
+            </div>
+          </form>
+    </div>
+</body>
+
+
+<script src="{% static 'js/documents.js' %}"></script>
+
+</html>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js">
+  </script>
+  <script src="{% static 'js/signup.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  {% if errormsg %}
+  <script>alert("Duplicate Data Entry.")</script>
+  {% endif %}
+
+</html>

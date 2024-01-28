@@ -1,0 +1,375 @@
+{% load static %}
+<!DOCTYPE html>
+
+<!-- Mirrored from www.vasterad.com/themes/listeo_22/dashboard-add-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jan 2024 11:15:58 GMT -->
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<title>Listeo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/main-color.css' %}" id="colors">
+</head>
+
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header Container
+================================================== -->
+<header id="header-container" class="fixed fullwidth dashboard">
+
+	<!-- Header -->
+	<header id="header-container" class="fixed fullwidth dashboard">
+
+		<!-- Header -->
+		<div id="header" class="not-sticky">
+			<div class="container">
+
+				<!-- Left Side Content -->
+				<div class="left-side">
+
+					<!-- Logo -->
+					<div id="logo">
+                        <a href="/"><img src="{% static 'images/logo.png' %}" alt=""></a>
+                        <a href="/" class="dashboard-logo"><img src="{% static 'images/logo2.png' %}" alt=""></a>
+                    </div>
+
+
+					<!-- Mobile Navigation -->
+					<div class="mmenu-trigger">
+						<button class="hamburger hamburger--collapse" type="button">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+					</div>
+
+					<!-- Main Navigation -->
+					<nav id="navigation" class="style-1">
+						<ul id="responsive">
+							<li><a href="#">Listings</a>
+								<ul>
+									<li><a href="#">Open Street Map</a>
+										<ul>
+											<li><a href="listings-list-full-width-with-map-OpenStreetMap.html">Full
+													Width List</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li><a class="current" href="#">User Panel</a>
+								<ul>
+									<li><a href="/user">Dashboard</a></li>
+									<!-- <li><a href="dashboard-messages.html">Messages</a></li> -->
+									<li><a href="/user/all-land">Bookings</a></li>
+									<li><a href="/user/wallet">Wallet</a></li>
+									<li><a href="/user/all-land">My Listings</a></li>
+									<li><a href="/user/review">Reviews</a></li>
+									<!-- <li><a href="dashboard-bookmarks.html">Bookmarks</a></li> -->
+									<li><a href="/user/add-land">Add Land</a></li>
+									<li><a href="/user/profile">My Profile</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</nav>
+					<div class="clearfix"></div>
+					<!-- Main Navigation / End -->
+
+				</div>
+				<!-- Left Side Content / End -->
+
+				<!-- Right Side Content / End -->
+				<div class="right-side">
+					<!-- Header Widget -->
+					<div class="header-widget">
+
+						<!-- User Menu -->
+						<div class="user-menu">
+							<div class="user-name"><span><img src="images/dashboard-avatar.jpg" alt=""></span>My
+								Account</div>
+							<ul>
+								<li><a href="dashboard.html"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
+								<li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i>
+										Bookings</a></li>
+								<li><a href="/"><i class="sl sl-icon-power"></i> Logout</a></li>
+							</ul>
+						</div>
+
+						<a href="dashboard-add-listing.html" class="button border with-icon">Add Land <i
+								class="sl sl-icon-plus"></i></a>
+					</div>
+					<!-- Header Widget / End -->
+				</div>
+				<!-- Right Side Content / End -->
+
+			</div>
+		</div>
+		<!-- Header / End -->
+
+	</header>
+	<!-- Header / End -->
+
+</header>
+<div class="clearfix"></div>
+<!-- Header Container / End -->
+
+
+<!-- Dashboard -->
+<div id="dashboard">
+
+	<!-- Navigation
+	================================================== -->
+
+	<!-- Responsive Navigation Trigger -->
+	<a href="#" class="dashboard-responsive-nav-trigger"><i class="fa fa-reorder"></i> Dashboard Navigation</a>
+	
+	<div class="dashboard-nav">
+		<div class="dashboard-nav-inner">
+
+			<ul data-submenu-title="Main">
+				<li><a href="/user"><i class="sl sl-icon-settings"></i> Dashboard</a></li>
+				<li class="active"><a href="/user/all-land" ><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
+				<li><a href="/user/wallet"><i class="sl sl-icon-wallet"></i> Wallet</a></li>
+			</ul>
+			
+			<ul data-submenu-title="Listings">
+				<li><a><i class="sl sl-icon-layers"></i> My Listings</a>
+					<ul>
+						<li><a href="dashboard-my-listings.html">Active <span class="nav-tag green">6</span></a></li>
+						<li><a href="dashboard-my-listings.html">Pending <span class="nav-tag yellow">1</span></a></li>
+						<li><a href="dashboard-my-listings.html">Expired <span class="nav-tag red">2</span></a></li>
+					</ul>	
+				</li>
+				<li><a href="/user/review"><i class="sl sl-icon-star"></i> Reviews</a></li>
+				<li ><a href="/user/add-land"><i class="sl sl-icon-plus"></i> Add Land</a></li>
+			</ul>	
+			<ul data-submenu-title="Account">
+				<li><a href="/user/profile"><i class="sl sl-icon-user"></i> My Profile</a></li>
+				<li><a href="/"><i class="sl sl-icon-power"></i> Logout</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<!-- Navigation / End -->
+
+
+			<!-- Content
+	================================================== -->
+			<div class="dashboard-content">
+
+				<!-- Titlebar -->
+				<div id="titlebar">
+					<div class="row">
+						<div class="col-md-12">
+							<h2>All Lands</h2>
+							<!-- Breadcrumbs -->
+							<nav id="breadcrumbs">
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">Dashboard</a></li>
+									<li>Bookings</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<!-- Listings -->
+					<div class="col-lg-12 col-md-12">
+						<div class="dashboard-list-box margin-top-0">
+
+							<!-- Booking Requests Filters  -->
+							<div class="booking-requests-filter">
+
+								
+
+								<!-- Date Range -->
+								<div id="booking-date-range">
+									<span></span>
+								</div>
+							</div>
+
+							<!-- Reply to review popup -->
+							<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+								<div class="small-dialog-header">
+									<h3>Send Message</h3>
+								</div>
+								<div class="message-reply margin-top-0">
+									<textarea cols="40" rows="3" placeholder="Your Message to Kathy"></textarea>
+									<button class="button">Send</button>
+								</div>
+							</div>
+
+							<h4>Booking Requests</h4>
+							<ul>
+								{% for item in data %}
+								<li class="{{item.status}}-booking">
+									<div class="list-box-listing bookings">
+										<div class="list-box-listing-img"><img src="data:image/png;base64,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" alt=""></div>
+										<div class="list-box-listing-content">
+											<div class="inner">
+												<h3>Survey No: {{ item.survey_no }} || Status:
+													{% if item.status == 'Rejected' %}
+													<span class="booking-status unpaid">Rejected</span>
+													{% else %}
+													<span class="booking-status {{ item.status }}">{{ item.status }}</span>
+													{% endif %}
+												</h3>
+							
+												<div class="inner-booking-list">
+													<h5>Booking Date:</h5>
+													<ul class="booking-list">
+														<li class="highlighted">{{ item.Date }}</li>
+													</ul>
+												</div>
+							
+												<div class="inner-booking-list">
+													<h5>Booking Details:</h5>
+													<ul class="booking-list">
+														<li class="highlighted">{{ item.Total_Owners }} Adults</li>
+													</ul>
+												</div>
+							
+												{# Additional details (Price, Client, etc.) can be added as needed #}
+							
+												{# Send Message button and approval/reject buttons can be uncommented as needed #}
+												{% comment %}
+												<div class="inner-booking-list">
+													<h5>Price:</h5>
+													<ul class="booking-list">
+														<li class="highlighted">$147</li>
+													</ul>
+												</div>
+							
+												<div class="inner-booking-list">
+													<h5>Client:</h5>
+													<ul class="booking-list">
+														<li>John Smith</li>
+														<li>john@example.com</li>
+														<li>123-456-789</li>
+													</ul>
+												</div>
+							
+												<a href="#small-dialog" class="rate-review popup-with-zoom-anim"><i class="sl sl-icon-envelope-open"></i> Send Message</a>
+												{% endcomment %}
+							
+											</div>
+										</div>
+									</div>
+									{% comment %}
+									<div class="buttons-to-right">
+										<a href="#" class="button gray reject"><i class="sl sl-icon-close"></i> Reject</a>
+										<a href="#" class="button gray approve"><i class="sl sl-icon-check"></i> Approve</a>
+									</div>
+									{% endcomment %}
+								</li>
+								{% endfor %}
+							</ul>
+							
+
+							
+						</div>
+
+					</div>
+
+
+					<!-- Copyrights -->
+					<div class="col-md-12">
+						<div class="copyrights">© 2021 Listeo. All Rights Reserved.</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Content / End -->
+
+
+		</div>
+		<!-- Dashboard / End -->
+
+
+	</div>
+	<!-- Wrapper / End -->
+
+
+	<!-- Scripts
+================================================== -->
+<script type="text/javascript" src="{% static 'scripts/jquery-3.6.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery-migrate-3.3.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/mmenu.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/chosen.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/rangeslider.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/magnific-popup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/waypoints.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/counterup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/tooltips.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/custom.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;callback=initAutocomplete"></script>
+<script type="text/javascript" src="{% static 'scripts/infobox.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/markerclusterer.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/maps.js' %}"></script>
+
+
+	<!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
+	<script src="scripts/moment.min.js"></script>
+	<script src="scripts/daterangepicker.js"></script>
+
+	<script>
+		$(function () {
+
+			var start = moment().subtract(29, 'days');
+			var end = moment();
+
+			function cb(start, end) {
+				$('#booking-date-range span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+			}
+			cb(start, end);
+			$('#booking-date-range').daterangepicker({
+				"opens": "left",
+				"autoUpdateInput": false,
+				"alwaysShowCalendars": true,
+				startDate: start,
+				endDate: end,
+				ranges: {
+					'Today': [moment(), moment()],
+					'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+					'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+					'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+					'This Month': [moment().startOf('month'), moment().endOf('month')],
+					'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+				}
+			}, cb);
+
+			cb(start, end);
+
+		});
+
+		// Calendar animation and visual settings
+		$('#booking-date-range').on('show.daterangepicker', function (ev, picker) {
+			$('.daterangepicker').addClass('calendar-visible calendar-animated bordered-style');
+			$('.daterangepicker').removeClass('calendar-hidden');
+		});
+		$('#booking-date-range').on('hide.daterangepicker', function (ev, picker) {
+			$('.daterangepicker').removeClass('calendar-visible');
+			$('.daterangepicker').addClass('calendar-hidden');
+		});
+	</script>
+
+
+</body>
+
+<!-- Mirrored from www.vasterad.com/themes/listeo_22/dashboard-bookings.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jan 2024 11:15:57 GMT -->
+
+</html>

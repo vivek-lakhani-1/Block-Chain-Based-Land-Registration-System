@@ -1,0 +1,670 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+
+	<!-- Basic Page Needs
+================================================== -->
+	<title>Listeo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/main-color.css' %}" id="colors">
+
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header Container
+================================================== -->
+		<header id="header-container">
+
+			<!-- Header -->
+			<div id="header">
+				<div class="container">
+
+					<!-- Left Side Content -->
+					<div class="left-side">
+
+						<!-- Logo -->
+						<div id="logo">
+							<a href="/"><img src="{% static 'images/logo.png' %}" alt=""></a>
+						</div>
+
+						<!-- Mobile Navigation -->
+						<div class="mmenu-trigger">
+							<button class="hamburger hamburger--collapse" type="button">
+								<span class="hamburger-box">
+									<div class="map"></div>
+									<span class="hamburger-inner"></span>
+								</span>
+							</button>
+						</div>
+
+						<!-- Main Navigation -->
+					
+
+							<!-- <li><a href="#">User Panel</a>
+								<ul>
+									<li><a href="dashboard.html">Dashboard</a></li>
+									<li><a href="dashboard-bookings.html">Bookings</a></li>
+									<li><a href="dashboard-wallet.html">Wallet</a></li>
+									<li><a href="dashboard-my-listings.html">My Listings</a></li>
+									<li><a href="dashboard-reviews.html">Reviews</a></li>
+									<li><a href="dashboard-add-listing.html">Add Land</a></li>
+									<li><a href="dashboard-my-profile.html">My Profile</a></li>
+									<li><a href="dashboard-invoice.html">Invoice</a></li>
+								</ul>
+							</li> -->
+						</nav>
+						<div class="clearfix"></div>
+						<!-- Main Navigation / End -->
+
+					</div>
+					<!-- Left Side Content / End -->
+
+
+					<!-- Right Side Content / End -->
+					<div class="right-side">
+						<div class="header-widget">
+							<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim"><i
+									class="sl sl-icon-login"></i> Sign In</a>
+							<!-- <a href="dashboard-add-listing.html" class="button border with-icon">Add Land <i
+									class="sl sl-icon-plus"></i></a> -->
+						</div>
+					</div>
+					<!-- Right Side Content / End -->
+
+					<!-- Sign In Popup -->
+					<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
+
+						<div class="small-dialog-header">
+							<h3>Sign In</h3>
+						</div>
+
+						<!--Tabs -->
+						<div class="sign-in-form style-1">
+
+							<ul class="tabs-nav">
+								<li class=""><a href="#tab1">Log In</a></li>
+								<li><a href="#tab2">Register</a></li>
+							</ul>
+
+							<div class="tabs-container alt">
+
+								<!-- Login -->
+								<div class="tab-content" id="tab1" style="display: none;">
+									<form method="post" class="login">
+
+										<p class="form-row form-row-wide">
+											<label for="username">Name:
+												<i class="im im-icon-Male"></i>
+												<input type="text" class="input-text" name="name" id="name" value="" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="password">Password:
+												<i class="im im-icon-Lock-2"></i>
+												<input class="input-text" type="password" name="password"
+													id="password" />
+											</label>
+											<span class="lost_password">
+												<a href="#">Lost Your Password?</a>
+											</span>
+										</p>
+
+
+										<div class="form-row">
+											<input type="submit" class="button border margin-top-5" name="login"
+												value="Login" />
+											<hr style="border: 2px solid grey;">
+											<button class="button border" id="connectButton"
+												style="margin-left: 90px; background-color:darkslategrey;">
+												<div>
+													<img src="./images/metamask.png" alt="error-metamask-icon"
+														style="height: 32px;">
+													<span> or sign in with Metamask</span>
+												</div>
+											</button>
+											<div class="checkboxes margin-top-10">
+												<input id="remember-me" type="checkbox" name="check">
+												<label for="remember-me" style="margin-top: 12px;">Remember Me</label>
+											</div>
+										</div>
+
+									</form>
+								</div>
+
+								<!-- Register -->
+								<div class="tab-content" id="tab2" style="display: none;">
+
+									<form method="post" class="register">
+
+										<p class="form-row form-row-wide">
+											<label for="username2">Name:
+												<i class="im im-icon-Male"></i>
+												<input type="text" class="input-text" name="username" id="username2"
+													value="" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="email2">Email Address:
+												<i class="im im-icon-Mail"></i>
+												<input type="text" class="input-text" name="email" id="email2"
+													value="" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="email2">Age:
+												<i class="im im-icon-Superman"></i>
+												<input type="number" class="input-text" name="age" id="age" value="" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="password1">Password:
+												<i class="im im-icon-Lock-2"></i>
+												<input class="input-text" type="password" name="password1"
+													id="password1" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="password2">Phone Number:
+
+												<i class="sl sl-icon-phone"></i>
+												<input class="input-text" type="text" name="phone" id="phone" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="password2">Address:
+												<i class="im im-icon-Chrysler-Building"></i>
+												<input class="input-text" type="text" name="address" id="address" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="password2">City:
+												<i class="im im-icon-Chrysler-Building"></i>
+												<input class="input-text" type="text" name="city" id="city" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="password2">Aadhar_Card:
+												<i class="im im-icon-Mail"></i>
+												<input class="input-text" type="file" name="aadhar_card"
+													id="aadhar_card" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="password2">Pan_Card:
+												<i class="im im-icon-Mail"></i>
+												<input class="input-text" type="file" name="pan_card" id="pan_card" />
+											</label>
+										</p>
+
+										<p class="form-row form-row-wide">
+											<label for="password2">Profile Photo:
+												<i class="im im-icon-File-Pictures
+												"></i>
+												<input class="input-text" type="file" name="photo" id="photo" />
+											</label>
+										</p>
+
+										<input type="submit" class="button border fw margin-top-10" name="register"
+											value="Register" />
+
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- Sign In Popup / End -->
+
+				</div>
+			</div>
+			<!-- Header / End -->
+
+		</header>
+		<div class="clearfix"></div>
+		<!-- Header Container / End -->
+
+
+		<!-- Map
+================================================== -->
+		<div id="map-container" class="fullwidth-home-map">
+
+			<div id="map" data-map-zoom="9">
+				<!-- map goes here -->
+			</div>
+
+			<div class="main-search-inner">
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+
+							<div class="main-search-input">
+
+								<div class="main-search-input-item">
+									<input type="text" placeholder="What are you looking for?" value="" />
+								</div>
+
+								<div class="main-search-input-item location">
+									<div id="autocomplete-container">
+										<input id="autocomplete-input" type="text" placeholder="Location">
+									</div>
+									<a href="#"><i class="fa fa-map-marker"></i></a>
+								</div>
+
+								<div class="main-search-input-item">
+									<select data-placeholder="All Categories" class="chosen-select">
+										<option>All Categories</option>
+										<option>Shops</option>
+										<option>Hotels</option>
+										<option>Restaurants</option>
+										<option>Fitness</option>
+										<option>Events</option>
+									</select>
+								</div>
+
+								<button class="button">Search</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Scroll Enabling Button -->
+			<a href="#" id="scrollEnabling" title="Enable or disable scrolling on map">Enable Scrolling</a>
+		</div>
+
+
+		<!-- Content
+================================================== -->
+
+		<!-- Listings -->
+		<div class="container margin-top-70">
+			<div class="row">
+
+				<div class="col-md-12">
+					<h3 class="headline centered margin-bottom-45">
+						Most Visited Places
+						<span>Discover top-rated local businesses</span>
+					</h3>
+				</div>
+
+				<div class="col-md-12">
+					<div class="simple-slick-carousel dots-nav">
+
+						<!-- Listing Item -->
+						<div class="carousel-item">
+							<a href="listings-single-page.html" class="listing-item-container">
+								<div class="listing-item">
+									<img src="images/listing-item-01.jpg" alt="">
+
+									<div class="listing-badge now-open">Now Open</div>
+
+									<div class="listing-item-content">
+										<span class="tag">Eat & Drink</span>
+										<h3>Tom's Restaurant</h3>
+										<span>964 School Street, New York</span>
+									</div>
+									<span class="like-icon"></span>
+								</div>
+								<div class="star-rating" data-rating="3.5">
+									<div class="rating-counter">(12 reviews)</div>
+								</div>
+							</a>
+						</div>
+						<!-- Listing Item / End -->
+
+						<!-- Listing Item -->
+						<div class="carousel-item">
+							<a href="listings-single-page.html" class="listing-item-container">
+								<div class="listing-item">
+									<img src="images/listing-item-02.jpg" alt="">
+									<div class="listing-item-details">
+										<ul>
+											<li>Friday, August 10</li>
+										</ul>
+									</div>
+									<div class="listing-item-content">
+										<span class="tag">Events</span>
+										<h3>Sticky Band</h3>
+										<span>Bishop Avenue, New York</span>
+									</div>
+									<span class="like-icon"></span>
+								</div>
+								<div class="star-rating" data-rating="5.0">
+									<div class="rating-counter">(23 reviews)</div>
+								</div>
+							</a>
+						</div>
+						<!-- Listing Item / End -->
+
+						<!-- Listing Item -->
+						<div class="carousel-item">
+							<a href="listings-single-page.html" class="listing-item-container">
+								<div class="listing-item">
+									<img src="images/listing-item-03.jpg" alt="">
+									<div class="listing-item-details">
+										<ul>
+											<li>Starting from $59 per night</li>
+										</ul>
+									</div>
+									<div class="listing-item-content">
+										<span class="tag">Hotels</span>
+										<h3>Hotel Govendor</h3>
+										<span>778 Country Street, New York</span>
+									</div>
+									<span class="like-icon"></span>
+								</div>
+								<div class="star-rating" data-rating="2.0">
+									<div class="rating-counter">(17 reviews)</div>
+								</div>
+							</a>
+						</div>
+						<!-- Listing Item / End -->
+
+						<!-- Listing Item -->
+						<div class="carousel-item">
+							<a href="listings-single-page.html" class="listing-item-container">
+								<div class="listing-item">
+									<img src="images/listing-item-04.jpg" alt="">
+
+									<div class="listing-badge now-open">Now Open</div>
+
+									<div class="listing-item-content">
+										<span class="tag">Eat & Drink</span>
+										<h3>Burger House</h3>
+										<span>2726 Shinn Street, New York</span>
+									</div>
+									<span class="like-icon"></span>
+								</div>
+								<div class="star-rating" data-rating="5.0">
+									<div class="rating-counter">(31 reviews)</div>
+								</div>
+							</a>
+						</div>
+						<!-- Listing Item / End -->
+
+						<!-- Listing Item -->
+						<div class="carousel-item">
+							<a href="listings-single-page.html" class="listing-item-container">
+								<div class="listing-item">
+									<img src="images/listing-item-05.jpg" alt="">
+									<div class="listing-item-content">
+										<span class="tag">Other</span>
+										<h3>Airport</h3>
+										<span>1512 Duncan Avenue, New York</span>
+									</div>
+									<span class="like-icon"></span>
+								</div>
+								<div class="star-rating" data-rating="3.5">
+									<div class="rating-counter">(46 reviews)</div>
+								</div>
+							</a>
+						</div>
+						<!-- Listing Item / End -->
+
+						<!-- Listing Item -->
+						<div class="carousel-item">
+							<a href="listings-single-page.html" class="listing-item-container">
+								<div class="listing-item">
+									<img src="images/listing-item-06.jpg" alt="">
+
+									<div class="listing-badge now-closed">Now Closed</div>
+
+									<div class="listing-item-content">
+										<span class="tag">Eat & Drink</span>
+										<h3>Think Coffee</h3>
+										<span>215 Terry Lane, New York</span>
+									</div>
+									<span class="like-icon"></span>
+								</div>
+								<div class="star-rating" data-rating="4.5">
+									<div class="rating-counter">(15 reviews)</div>
+								</div>
+							</a>
+						</div>
+						<!-- Listing Item / End -->
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<!-- Listings / End -->
+
+
+		<section class="fullwidth margin-top-70 padding-top-75 padding-bottom-70" data-background-color="#f9f9f9">
+			<!-- Info Section -->
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h3 class="headline centered">
+							What Our Users Say
+							<span class="margin-top-25">We collect reviews from our users so you can get an honest
+								opinion of what an experience with our website are really like!</span>
+						</h3>
+					</div>
+				</div>
+
+			</div>
+			<!-- Info Section / End -->
+
+			<!-- Categories Carousel -->
+			<div class="fullwidth-carousel-container margin-top-20">
+				<div class="testimonial-carousel testimonials">
+
+					<!-- Item -->
+					<div class="fw-carousel-review">
+						<div class="testimonial-box">
+							<div class="testimonial">Bring to the table win-win survival strategies to ensure proactive
+								domination. At the end of the day, going forward, a new normal that has evolved from
+								generation is on the runway heading towards a streamlined cloud solution user generated
+								content.</div>
+						</div>
+						<div class="testimonial-author">
+							<img src="images/happy-client-01.jpg" alt="">
+							<h4>Jennie Smith <span>Coffee Shop Owner</span></h4>
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="fw-carousel-review">
+						<div class="testimonial-box">
+							<div class="testimonial">Capitalize on low hanging fruit to identify a ballpark value added
+								activity to beta test. Override the digital divide with additional clickthroughs from
+								DevOps. Nanotechnology immersion along the information highway will close the loop.
+							</div>
+						</div>
+						<div class="testimonial-author">
+							<img src="images/happy-client-02.jpg" alt="">
+							<h4>Tom Baker <span>Clothing Store Owner</span></h4>
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="fw-carousel-review">
+						<div class="testimonial-box">
+							<div class="testimonial">Leverage agile frameworks to provide a robust synopsis for high
+								level overviews. Iterative approaches to corporate strategy foster collaborative
+								thinking to further the overall value proposition. Organically grow the holistic world
+								view.</div>
+						</div>
+						<div class="testimonial-author">
+							<img src="images/happy-client-03.jpg" alt="">
+							<h4>Jack Paden <span>Restaurant Owner</span></h4>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- Categories Carousel / End -->
+
+		</section>
+
+
+
+
+		<!-- Footer
+================================================== -->
+		<div id="footer">
+			<!-- Main -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 col-sm-6">
+						<img class="footer-logo" src="images/logo.png" alt="">
+						<br><br>
+						<p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros.
+							Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
+					</div>
+
+					<div class="col-md-4 col-sm-6 ">
+						<h4>Helpful Links</h4>
+						<ul class="footer-links">
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Sign Up</a></li>
+							<li><a href="#">My Account</a></li>
+							<li><a href="#">Add Land</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+
+						<ul class="footer-links">
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Our Partners</a></li>
+							<li><a href="#">How It Works</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="col-md-3  col-sm-12">
+						<h4>Contact Us</h4>
+						<div class="text-widget">
+							<span>12345 Little Lonsdale St, Melbourne</span> <br>
+							Phone: <span>(123) 123-456 </span><br>
+							E-Mail:<span> <a href="#">office@example.com</a> </span><br>
+						</div>
+
+						<ul class="social-icons margin-top-20">
+							<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
+							<li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
+							<li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
+							<li><a class="vimeo" href="#"><i class="icon-vimeo"></i></a></li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				<!-- Copyright -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="copyrights">© 2021 Listeo. All Rights Reserved.</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- Footer / End -->
+
+
+		<!-- Back To Top Button -->
+		<div id="backtotop"><a href="#"></a></div>
+
+
+	</div>
+	<!-- Wrapper / End -->
+
+
+
+	<!-- Scripts
+================================================== -->
+<script type="text/javascript" src="{% static 'scripts/jquery-3.6.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery-migrate-3.3.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/mmenu.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/chosen.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/rangeslider.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/magnific-popup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/waypoints.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/counterup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/tooltips.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/custom.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'scripts/infobox.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/markerclusterer.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/maps.js' %}"></script>
+
+	<!-- Google Autocomplete -->
+	<script>
+		function initAutocomplete() {
+			var input = document.getElementById('autocomplete-input');
+			var autocomplete = new google.maps.places.Autocomplete(input);
+
+			autocomplete.addListener('place_changed', function () {
+				var place = autocomplete.getPlace();
+				if (!place.geometry) {
+					return;
+				}
+			});
+
+			if ($('.main-search-input-item')[0]) {
+				setTimeout(function () {
+					$(".pac-container").prependTo("#autocomplete-container");
+				}, 300);
+			}
+		}
+	</script>
+
+	<!-- Maps -->
+	
+	<script type="text/javascript" src="scripts/infobox.min.js"></script>
+	<script type="text/javascript" src="scripts/markerclusterer.js"></script>
+	<script type="text/javascript" src="scripts/maps.js"></script>
+
+</body>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+	var map = L.map('map').setView([23.20096, 71.89453], 13);
+	{% comment %} var marker = L.marker([23.20096, 71.89453]).addTo(map); {% endcomment %}
+
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '© OpenStreetMap contributors'
+	}).addTo(map);
+
+	// Add click event listener to the map
+	map.on('click', function(e) {
+		var latlng = e.latlng;  // Get the coordinates where the map was clicked
+		
+
+		// Update the latitude and longitude input fields
+		document.getElementById('latitude').value = latlng.lat.toFixed(5);
+		document.getElementById('longitude').value = latlng.lng.toFixed(5);
+	});
+</script>
+</html>
