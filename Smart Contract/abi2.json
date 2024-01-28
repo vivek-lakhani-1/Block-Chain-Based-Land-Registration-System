@@ -1,0 +1,202 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "getLatestNonce",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "nonce",
+				"type": "uint256"
+			}
+		],
+		"name": "getPropertyData",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "walletAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "areaSqft",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "locationAddress",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "propertyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "surveyNumber",
+				"type": "uint256"
+			},
+			{
+				"internalType": "int32",
+				"name": "lat",
+				"type": "int32"
+			},
+			{
+				"internalType": "int32",
+				"name": "long",
+				"type": "int32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "latestNonce",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "properties",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "walletAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "areaSqft",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "locationAddress",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "propertyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "surveyNumber",
+				"type": "uint256"
+			},
+			{
+				"internalType": "int32",
+				"name": "lat",
+				"type": "int32"
+			},
+			{
+				"internalType": "int32",
+				"name": "long",
+				"type": "int32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_walletAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_areaSqft",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_locationAddress",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_price",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_propertyId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_surveyNumber",
+				"type": "uint256"
+			},
+			{
+				"internalType": "int32",
+				"name": "_lat",
+				"type": "int32"
+			},
+			{
+				"internalType": "int32",
+				"name": "_long",
+				"type": "int32"
+			}
+		],
+		"name": "storeProperty",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
