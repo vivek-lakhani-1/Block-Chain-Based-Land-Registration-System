@@ -3,6 +3,10 @@ import random
 from .models import Add_property
 import requests
 
+import folium
+
+
+
 def user_dashboard(request):
     value = "0x888asdfasdf8aa"
     if(value == None):
@@ -77,31 +81,39 @@ def wallet(request):
 
 
 def land_aminities(request):
-    
 
     api_key = "AIzaSyBug3gBE8wZoZqLxAZHCyVl8GNo2Gm0ARw"
     location = "23.0225,72.5714"
     url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius=5000&key={api_key}"
-
-    # Send the request and get the response
     response = requests.get(url)
-
-    # Parse the JSON response
     data = response.json()
-    param = {
-        'lat': 23.0225,
-        'long':72.5714
-    }
+
     # Check for errors
     if data["status"] == "OK":
         amenities = data["results"]
+
+        # Create a Folium map centered at the initial location
+        map_center = [float(location.split(',')[0]), float(location.split(',')[1])]
+        mymap = folium.Map(location=map_center, zoom_start=12)
+
+        # Add markers for each amenity obtained from the API
         for amenity in amenities:
             name = amenity.get("name", "N/A")
             address = amenity.get("vicinity", "N/A")
             latitude = amenity["geometry"]["location"]["lat"]
             longitude = amenity["geometry"]["location"]["lng"]
-            print(f"Name: {name}, Address: {address}, Latitude: {latitude}, Longitude: {longitude}")
+            
+            # Add markers for each amenity
+            folium.Marker(
+                location=[latitude, longitude],
+                popup=f"Name: {name}<br>Address: {address}",
+                icon=folium.Icon(color="blue")
+            ).add_to(mymap)
+
+        # Save the map to an HTML file
+        mymap.save("template/map_with_markers.html")
     else:
-        print("Error:", data.get("error_message", "Unknown error"))
+        print(f"Error: {data['status']}")
+
     
-    return render(request,'aminities.html',param)
+    return render(request,'map_with_markers.html')
