@@ -55,5 +55,4 @@ To install and run the Land Registration System on your local machine, follow th
 2. **Land Registration**: Users with appropriate permissions (e.g., Land Inspector) can register land parcels using longitude and latitude coordinates.
 3. **NFT Generation**: Upon successful registration, the system automatically converts the land parcel into a unique NFT.
 4. **Amenities Display**: Users can explore amenities around the registered land, aiding in decision-making processes.
-5. **Transaction**: Users can engage in transparent land transactions using the generated NFTs, ensuring immutable ownership records.
-
+5. **Transaction**: Users can engage in transparent land transactions using the generated NFTs, ensuring immutable ownership records
